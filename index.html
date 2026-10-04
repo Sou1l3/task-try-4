@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div id="errorfalt" class="alert alert-danger d-none"></div>
+    <div class="loading d-none" id="mr_spinner">
+      <span class="loader"></span>
+    </div>
+
+    <section class="py-5">
+      <div class="container">
+        <div class="card mb-4">
+          <div class="card-body">
+            <h2 class="card-title mb-3">Your product</h2>
+            <div class="mb-3">
+              <input
+                type="text"
+                class="form-control mb-2"
+                required
+                id="productnameid"
+                placeholder="product name"
+              />
+              <input
+                type="number"
+                class="form-control mb-2"
+                placeholder="product price"
+                id="productpriceid"
+                inputmode="numeric"
+                min=".1"
+                required
+              />
+              <div class="mb-3">
+                <label for="" class="form-label"></label>
+                <textarea
+                  class="form-control"
+                  name=""
+                  id="description"
+                  rows="3"
+                  placeholder="description"
+                  required
+                ></textarea>
+              </div>
+              <button
+                type="button"
+                onclick="addar()"
+                id="submitguy"
+                class="btn btn-primary"
+              >
+                add item
+              </button>
+              <button type="button" id="edit" class="btn btn-secondary d-none">
+                edit
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container">
+        <div
+          id="cards-container"
+          class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4"
+        ></div>
+      </div>
+    </section>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>
